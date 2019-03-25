@@ -1,0 +1,610 @@
+
+<html><head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="title" content="">
+        <meta name="keywords" content="{{keywords}}">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+<style>
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+p {
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 26px;
+	color: #4b4b4b;
+}
+img {
+	max-width: 100%;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+}
+.clear {
+    clear: both;
+}
+main,
+header,
+section,
+.store_faetures ul,
+.footer_features ul,
+footer {
+	width: 100%;
+	float: left;
+}
+header {
+	padding: 20px 0;
+	text-align: center;
+}
+header a {
+	display: inline-block;
+}
+.store_features {
+	background: #323b47;
+}
+.store_features li {
+	width: 25%;
+	display: table;
+	float: left;
+}
+.store_features li div {
+	padding-right: 5%;
+	width: 30%;
+	height: 100px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: right;
+}
+.store_features li h3 {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 15px;
+	font-weight: 400;
+	color: #FFF;
+}
+.store_features li h3 span {
+	font-size: 13px;
+	font-weight: 300;
+}
+.gif_img {
+	display: none;
+}
+.title {
+	padding: 20px;
+	border: 1px solid #e9e9e9;
+	border-top: none;
+	text-align: center;
+}
+.title h2 {
+	font-size: 24px;
+	font-weight: 400;
+	color: #323b47;
+}
+.image_gallery {
+	margin-bottom: 20px;
+	padding: 20px;
+    text-align: center;
+}
+/*GALLERY CSS*/
+.container {
+    width: 100%;
+    position: relative;
+    margin:0 auto;
+}
+.thumbnails {
+	text-align: center;
+    list-style: none;
+    font-size: 0;
+}
+.thumbnails li {
+    margin: 15px 8px 0 8px;
+    width: 90px;
+	height: 90px;
+	background: #fff;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+.thumbnails input[name="select"] {
+    display: none;
+}
+.thumbnails .item-hugger {
+	padding: 5px;
+	width: 100%;
+	height: 100%;
+    position: relative;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	align-items: center;
+	border: 1px solid #e3e3e3;
+    transition: all 150ms ease-in-out;
+}
+.thumbnails label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+.thumbnails .gallery_content {
+	max-width: 540px;
+    width: 100%;
+    height: 500px;
+	background: #fff;
+    transition: all 150ms linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	align-items: center;
+    overflow: hidden;
+	opacity: 0;
+	position: absolute;
+    top: 0;
+    left: 50%;
+	transform: translateX(-50%);
+}
+.thumbnails input[name="select"]:checked + .item-hugger {
+    border-color: #a2a2a2;
+}
+.thumbnails input[name="select"]:checked ~ .gallery_content {
+    opacity: 1;
+}
+.white-box {
+    height: 500px;
+    overflow: hidden;
+}
+.temp_content {
+	margin-bottom: 40px;
+}
+.temp_content h2 {
+	padding: 12px 20px;
+	background: #323b47;
+	font-size: 24px;
+	font-weight: 400;
+	color: #FFF;
+}
+.description {
+	padding: 20px;
+	border: 1px solid #e9e9e9;
+	border-top: none;
+}
+.description ul {
+	margin-bottom: 20px;
+}
+.description ul li,
+.tab-content ul li {
+	padding: 5px 10px 5px 20px;
+	background: url(https://wearephoenixteam.com/ebay/free-templates/images/temp6/bullet.png) left 10px no-repeat;
+	font-weight: 300;
+	font-size: 14px;
+	color: #4b4b4b;
+}
+.vertabs {
+	margin-bottom: 40px;
+}
+/*CSS VRETICAL TABS*/
+.css_tab {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+.css-tab {
+    display: none;
+}
+.css_tab li {
+    display: inline-block;
+    float: left;
+    width: 100%;
+}
+.css_tab li label {
+    padding: 15px;
+    width: 250px;
+    background: #323b47;
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFF;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    float: left;
+    cursor: pointer;
+}
+.css_tab li:nth-child(2) label {
+    top: 52px;
+}
+.css_tab li:nth-child(3) label {
+    top: 103px;
+}
+.css_tab li:nth-child(4) label {
+    top: 154px;
+}
+.css_tab li:nth-child(5) label {
+    top: 205px;
+}
+.css_tab li:nth-child(6) label {
+    top: 256px;
+}
+.css_tab li:nth-child(7) label {
+    top: 307px;
+}
+.css-tab:checked + .tab-label {
+    background: #FFF;
+	color: #323b47;
+}
+.tab-label:hover {
+    background: #F2F2F2;
+	color: #323b47;
+}
+#tab1:checked ~ #tab-content1,
+#tab2:checked ~ #tab-content2,
+#tab3:checked ~ #tab-content3,
+#tab4:checked ~ #tab-content4,
+#tab5:checked ~ #tab-content5,
+#tab6:checked ~ #tab-content6,
+#tab7:checked ~ #tab-content7 {
+    display: block;
+}
+.tab-content {
+    padding: 30px 20px 30px 270px;
+    width: 100%;
+    border: solid 1px #e9e9e9;
+    display: none;
+    text-align: left;
+    float: left;
+    min-height: 410px;
+}
+.tab-content h2{
+	margin-bottom: 20px;
+	text-align: center;
+    font-size: 24px;
+	letter-spacing: 1px;
+    font-weight: 400;
+    color: #323b47;
+}
+.footer_features {
+	margin-bottom: 20px;
+}
+.footer_features ul li {
+	margin: 0 2.66% 20px 0;
+	width: 23%;
+	float: left;
+}
+.footer_features ul li:nth-child(4) {
+	margin-right: 0;
+}
+.footer_features ul li div {
+	width: 100%;
+	height: 120px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #323b47;
+	text-align: center;
+	vertical-align: middle;
+}
+.footer_features ul li h2 {
+	padding: 10px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	line-height: 24px;
+	color: #323b47;
+	border: 1px solid #323b47;
+}
+.footer_features ul li h2 span {
+	font-size: 13px;
+}
+footer {
+	padding: 30px 20px;
+	text-align: center;
+	border-top: 1px solid #e9e9e9;
+}
+@media only screen and (max-width: 840px) {
+	.store_features {
+		text-align: center;
+	}
+	.store_features ul {
+		display: none;
+	}
+	.gif_img {
+		display: inline-block;
+	}
+	/*tab-css*/
+    .css_tab li label {
+        padding: 15px;
+        width: 100% !important;
+        position: static;
+        background: #323b47 url(https://wearephoenixteam.com/ebay/free-templates/images/temp6/plus.png) right center no-repeat;
+        text-align: left;
+        border: none;
+    }
+    .css_tab li{
+        margin-bottom: 1px;
+    }
+    .tab-content {
+        padding: 15px 20px;
+    }
+    .css_tab li label:hover{
+        background: #d8d8d8 url(https://wearephoenixteam.com/ebay/free-templates/images/temp6/plus.png) right center no-repeat;
+        border: none;
+    }
+    .css-tab:checked + .tab-label{
+        border-bottom: 1px solid #ddd;
+        background: #d8d8d8 url(https://wearephoenixteam.com/ebay/free-templates/images/temp6/images/minus.png) right center no-repeat;
+    }
+	.footer_features ul li {
+		margin-right: 4%;
+		width: 48%;
+	}
+	.footer_features ul li:nth-child(2n) {
+		margin-right: 0;
+	}
+}
+@media only screen and (max-width: 640px) {
+	.footer_features ul li {
+		margin-right: 0 !important;
+		width: 100%;
+	}
+	.thumbnails .gallery_content,
+	.white-box {
+		height: 400px;
+	}
+}
+.shippay{width:960px;margin:0 auto 2em;font-size:12px;color:#000;background:#fff;line-height:1.5;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;overflow:hidden}.shippay a,.shippay img,.shippay li,.shippay span,.shippay ul{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:content-box}.shippay ul{list-style:none}.shippay .categories{background:#eee;box-shadow:inset 0 2px 10px -5px #000;overflow:hidden;font-size:0}.shippay .categories a{font-size:12px;color:#555}.shippay .categories a,.shippay .categories a *{text-decoration:none}.shippay .categories a:hover span{text-decoration:underline}.shippay .categories li{display:inline-block;float:left;text-align:center;vertical-align:top}.shippay .categories li a,.shippay .categories li a img,.shippay .categories li a:before{display:inline-block;vertical-align:middle}.shippay .categories li a{position:relative;padding:10px;width:100px;height:90px}.shippay .categories li a:before{content:'';height:70px}.shippay .categories li a.active,.shippay .categories li a:hover{background:#ddd;box-shadow:inset 0 2px 10px -5px #000}.shippay .categories li a span{position:absolute;display:block;bottom:8px;text-align:center;left:0;right:0;font-weight:700}
+
+</style>
+	</head>
+	<body>
+		<main>
+			<div class="wrapper">
+				<header>
+					<img src="https://shippay.ma/wp-content/uploads/2017/05/Shippay_logo.jpg" alt="">
+				</header>
+				
+<div class="shippay">
+
+</div>
+				<section class="title">
+					<h2><b>SHIPPAY PREMIUM IPTV</b></h2>
+				</section>
+				<section class="image_gallery">
+					<div class="container">
+						<div class="white-box"></div>
+						<ul class="thumbnails">
+							<li>
+								<input type="radio" name="select" id="image1" checked="">
+								<div class="item-hugger">
+									<img class="thumb-image" src="https://lh3.googleusercontent.com/ecEruXEZ28ujo3oGS3SmC2HDExXOgFWdI1Gm5NEzC5PAsw1AmE3I3pNOcN7uau9nh09m189mqU-G62iiXl8M=w1214-h721" alt="ebay custom template">
+									<label for="image1"></label>
+								</div>
+								<div class="gallery_content">
+									<img src="https://shippay.ma/wp-content/uploads/2018/06/smart-iptv-pack-7A-1.jpg" alt="ebay custom template">
+								</div>
+							</li>
+							<li class="is-active">
+								<input type="radio" name="select" id="image2">
+								<div class="item-hugger">
+									<img class="thumb-image" src="https://lh3.googleusercontent.com/s2bVHu8Y2zC6ym1qpB_Oyw9ECzJng5fARPU6G29s1Ypqxv_1JTD2WXzYpb1uhUw2XROAqIXl173b-f75PfvD=w1214-h721" alt="ebay custom template">
+									<label for="image2"></label>
+								</div>
+								<div class="gallery_content">
+									<img src="https://lh5.googleusercontent.com/t488Y6DL1I2gowgwDTB6zKiEkD2u5wxaw8Hkecdf5pR_w_bfPWS_aBQB6u2IUK30BHw_QblUl0WlsIA9cMI1=w1214-h721" alt="ebay custom template">
+								</div>
+							</li>
+							<li>
+								<input type="radio" name="select" id="image3">
+								<div class="item-hugger">
+									<img class="thumb-image" src="https://lh5.googleusercontent.com/t488Y6DL1I2gowgwDTB6zKiEkD2u5wxaw8Hkecdf5pR_w_bfPWS_aBQB6u2IUK30BHw_QblUl0WlsIA9cMI1=w1214-h721" alt="ebay custom template">
+									<label for="image3"></label>
+								</div>
+								<div class="gallery_content">
+									<img src="https://lh5.googleusercontent.com/Oj6gKfDUvMgiY9cTvMhD8C1bBPpJvcQSXvyrqRMQ7js6CXrLjnl_Zqx79md3IPo7KIgwjUIkzWrm6LE39omy=w1214-h721" alt="ebay custom template">
+								</div>
+							</li>
+							<li>
+								<input type="radio" name="select" id="image4">
+								<div class="item-hugger">
+									<img class="thumb-image" src="https://lh5.googleusercontent.com/Oj6gKfDUvMgiY9cTvMhD8C1bBPpJvcQSXvyrqRMQ7js6CXrLjnl_Zqx79md3IPo7KIgwjUIkzWrm6LE39omy=w1214-h721" alt="ebay custom template">
+									<label for="image4"></label>
+								</div>
+								<div class="gallery_content">
+									<img src="http://placehold.it/300x300" alt="ebay custom template">
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="temp_content">
+					<h2>Description du Produit</h2>
+					<div class="description">
+                        <div vocab="https://schema.org/" typeof="Product">
+                                      <span property="description">
+                                        <p>SHIPPAY Premium IPTV est le service qui va vous permettre de visionner la télévision numérique en passant uniquement par une connexion haut débit ADSL, vous n’aurez pas besoin de câble ou satellite, une simple connexion internet suffit ou encore une couverture 4G à grande capacité.</p>
+										<br>
+										<p>L’abonnement Premium IPTV est un abonnement de 12 mois doté de plus de 5000 chaînes (Françaises, Arabes, Américaines), et plus de 2000 films en VOD (films français et américains), avec un serveur fiable et stable.</p>
+										<br>
+										<p>Le pack Premium IPTV est fourni avec la fonction interactive VOD (Vidéo à la demande) ; Il s'agit d'une livraison individuelle du contenu vidéo à un abonné. Ce service permet à ses utilisateurs d'ordre pour regarder n'importe quel film de la bibliothèque du serveur VoD des médias. L'abonné peut utiliser la pause et rembobiner.</p>
+										<br>
+										<p>vous pouvez bénéficier de service IPTV sur n'importe quel appareil : Smart TV, Smartphone, Tablette, Android Box, Ordinateur...</p>
+										<br>
+										<p>Le Service IPTV n'est pas géolocalisés, vous pouvez l'utiliser partout dans le monde.</p>
+                                      </span>
+                                    </div>
+									
+							
+					</div>
+									<br>
+				<section class="temp_content">
+					<h2>La vitesse de connexion Internet nécessaire :</h2>
+					<div class="description">
+                        <div vocab="https://schema.org/" typeof="Product">
+                                      <span property="description">
+                                        <p>La vitesse diffère suivant la qualité de la vidéo :</p>
+										<br>
+										<p>- Pour la qualité SD le minimum conseillé est 4 Mbps</p>
+										<p>- pour la qualité HD le minimum est de 8 Mbps</p>
+										<p>- pour la qualité Full HD le minimum est 12 Mbps.</p>
+                                      </span>
+                                    </div>
+									
+							
+					</div>	
+									  <br>
+					<h2>IPTV sur Smartphone :</h2>
+					<div class="description">
+                        <div vocab="https://schema.org/" typeof="Product">
+                                      <span property="description">
+                                        <p>Nos Serveurs IPTV sont compatibles avec tout appareil Android Téléphone, Tablette ou Télévision à système Android via plusieurs applications, Il suffit de l’installer et de rentrer sur les paramètres, le LOGIN et le MOT DE PASSE qui vous seront envoyés lors de votre commande d'un Abonnement IPTV.</p>
+										<br>
+                                      </span>
+                                    </div>		
+					</div>	
+									  <br>	
+					<h2>Support Technique :</h2>
+					<div class="description">
+                        <div vocab="https://schema.org/" typeof="Product">
+                                      <span property="description">
+                                        <p>La mise en service de l’IPTV est très facile et notre service technique est à votre disposition pour toutes questions ou renseignements que ce soit par mail, téléphone ou par le biais de notre page Facebook.</p>
+										<br>
+                                      </span>
+                                    </div>		
+					</div>	
+									  <br>	
+					<h2>Teste IPTV 24H gratuit :</h2>
+					<div class="description">
+                        <div vocab="https://schema.org/" typeof="Product">
+                                      <span property="description">
+                                        <p>N’hésitez pas à demander votre test de 24h sur notre page facebook, nos équipes se feront un énorme plaisir pour vous assister.</p>
+										<br>
+                                      </span>
+                                    </div>		
+					</div>	
+									  <br>	
+					<h2>Remarque importante :</h2>
+					<div class="description">
+                        <div vocab="https://schema.org/" typeof="Product">
+                                      <span property="description">
+                                        <p>Le fournisseur est le seul responsable du contenu et de la disponibilité des chaînes incluses dans l’offre. Il se peut que certaines chaînes soient temporairement indisponibles, cela est totalement indépendant de notre volonté.</p>
+										<br>
+										<p>SHIPPAY ne peut être tenue responsable d’aucun changement, suppression ou modification des chaînes incluses dans l’offre.</p>
+										<br>
+                                      </span>
+                                    </div>		
+					</div>	
+									  <br>										  
+				</section>
+				<section class="vertabs">
+					<ul class="css_tab">
+						<li>
+							<input id="tab1" class="css-tab" name="tab" checked="" type="radio">
+							<label for="tab1" class="tab-label">SHIPPING</label>
+							<div id="tab-content1" class="tab-content">
+								<h2>SHIPPING POLICY</h2>
+								<p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+							</div>
+						</li>
+						<li>
+							<input id="tab2" class="css-tab" name="tab" type="radio">
+							<label for="tab2" class="tab-label">FEEDBACK</label>
+							<div id="tab-content2" class="tab-content">
+								<h2>FEEDBACK</h2>
+								<h3><i>Titre</i></h3>
+								<img style="display:block; margin: 10px auto;" src="http://placehold.it/100x100">
+								<p>Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de la section 1.10.32.</p>
+								<br>
+								<span>kjgjkgjkg</span>
+							</div>
+						</li>
+						<li>
+							<input id="tab3" class="css-tab" name="tab" type="radio">
+							<label for="tab3" class="tab-label">PAYMENT</label>
+							<div id="tab-content3" class="tab-content">
+								<h2>PAYMENT POLICY</h2>
+								<img src="http://placehold.it/100x100">
+								<p>Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de la section 1.10.32.</p>
+
+							</div>
+						</li>
+						<li>
+							<input id="tab4" class="css-tab" name="tab" type="radio">
+							<label for="tab4" class="tab-label">RETURN</label>
+							<div id="tab-content4" class="tab-content">
+								<h2>RETURNS POLICY</h2>
+								
+							</div>
+						</li>
+						<li>
+							<input id="tab5" class="css-tab" name="tab" type="radio">
+							<label for="tab5" class="tab-label">EXCHANGE</label>
+							<div id="tab-content5" class="tab-content">
+								<h2>EXCHANGE POLICY</h2>
+								
+							</div>
+						</li>
+						<li>
+							<input id="tab6" class="css-tab" name="tab" type="radio">
+							<label for="tab6" class="tab-label">CANCELLATION</label>
+							<div id="tab-content6" class="tab-content">
+								<h2>CANCELLATION</h2>
+								
+							</div>
+						</li>
+						<li>
+							<input id="tab7" class="css-tab" name="tab" type="radio">
+							<label for="tab7" class="tab-label">CONTACT US</label>
+							<div id="tab-content7" class="tab-content">
+								<h2>CONTACT US</h2>
+								
+							</div>
+						</li>
+					</ul>
+				</section>
+				<section class="footer_features">
+					<ul>
+						<li>
+							<div><img src="https://wearephoenixteam.com/ebay/free-templates/images/temp6/free-ship.png" alt="s"></div>
+							<h2>Free Shipping<br><span>Within the local</span></h2>
+						</li>
+						<li>
+							<div><img src="https://wearephoenixteam.com/ebay/free-templates/images/temp6/money-back.png" alt="s"></div>
+							<h2>Money back<br><span>30 days money back guarantee</span></h2>
+						</li>
+						<li>
+							<div><img src="https://wearephoenixteam.com/ebay/free-templates/images/temp6/best-quality.png" alt="s"></div>
+							<h2>Best Quality<br><span>Customer Satisfaction</span></h2>
+						</li>
+						<li>
+							<div><img src="https://wearephoenixteam.com/ebay/free-templates/images/temp6/paypal.png" alt="s"></div>
+							<h2>We Accept<br><span>PayPal only</span></h2>
+						</li>
+					</ul>
+				</section>
+				<footer>
+                    <table valign="center" align="center" width="100%"> <tbody><tr><td align="left"><p>SHIPPAY Copyright ©  | All Rights Reserved</p></td><td align="right"><img src="gallery_content&#10;&#9;&#9;&#9;&#9;&#9;https://www.wearephoenixteam.com/ebay/free-templates/images/ebycopyright.png"></td></tr></tbody></table>
+				</footer>
+				<div class="clear"></div>
+			</div>
+		</main>
+	
+</body></html>
+iptv_html_page_01.html
+Displaying iptv_html_page_01.html.
